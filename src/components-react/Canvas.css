@@ -1,0 +1,50 @@
+/* Estilos para el dropdown de colores */
+select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  appearance: none; /* Elimina la apariencia predeterminada en algunos navegadores */
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+  padding-right: 32px; /* Espacio para el ícono de flecha */
+}
+
+/* Estilos para las opciones del dropdown */
+select option {
+  background-color: #fff;
+  color: #333;
+  padding-left: 24px; /* Espacio para el indicador de color */
+  position: relative;
+}
+
+/* Indicador de color para cada opción */
+select option::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Colores para cada opción */
+select option[value="red"]::before { background-color: red; }
+select option[value="green"]::before { background-color: green; }
+select option[value="blue"]::before { background-color: blue; }
+/* Agrega más colores según sea necesario */
+
+/* Estilos para el dropdown cuando está enfocado */
+select:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
